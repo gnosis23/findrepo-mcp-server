@@ -1,0 +1,27 @@
+{
+  "name": "findrepo-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server to get github trends info from https://findrepo.work",
+  "type": "module",
+  "bin": {
+    "findrepo": "./build/index.js"
+  },
+  "scripts": {
+    "dev": "tsc && node build/index.js",
+    "build": "tsc && chmod 755 build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": ["mcp", "modelcontextprotocol", "findrepo"],
+  "author": "bhwang <bj050323@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5.8.2"
+  }
+}
