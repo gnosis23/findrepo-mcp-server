@@ -1,6 +1,5 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { z } from "zod";
 
 const API_BASE = "https://www.findrepo.work";
 
@@ -38,7 +37,7 @@ server.tool(
         content: [
           {
             type: "text",
-            text: list.map((item: TrendItem, index: number) => `${index + 1}. ${item.repo_name}: ${item.repo_url}`).join("\n"),
+            text: list.map((item: TrendItem) => `${item.repo_name}: ${item.repo_url}`).join("\n"),
           },
         ],
       };
