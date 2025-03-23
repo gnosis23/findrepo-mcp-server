@@ -25,14 +25,9 @@ const server = new McpServer({
 server.tool(
   "get-today-trends",
   "Get today's github trends",
-  {
-    language: z.string().optional().describe("Programming language"),
-  },
-  async ({ language }) => {
+  {},
+  async () => {
     let url = `${API_BASE}/api/get-today-trends`;
-    if (language) {
-      url += `?language=${language}`;
-    }
 
     try {
       const response = await fetch(url);
